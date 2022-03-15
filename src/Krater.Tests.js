@@ -3,15 +3,20 @@
  */
 
  Tests = {
-     
+    ArrayAssert: require('./ArrayAssert'),
+    Assert: require('./Assert'),
+    AssertFailedError: require('./AssertFailedError'),
+    StringAssert: require('./StringAssert'),
+    Test: require('./Test'),
+    UnitTest: require('./UnitTest'),
 };
 
 Object.defineProperty(Tests, 'VERSION', {
-    value: '0.0.1 ',
+    value: '1.0.0',
     writable: false
 });
 
-module.exports = Krater;
+module.exports = Tests;
 
 if (!global.Krater) global.Krater = {};
 global.Krater.Tests = Tests;

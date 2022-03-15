@@ -1,10 +1,10 @@
 {
   "name": "krater.tests",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Библиотека для Юнит тестирования",
   "main": "src/Krater.Tests.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/Krater.Tests.js",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch"
