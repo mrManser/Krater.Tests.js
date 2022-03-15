@@ -51,9 +51,9 @@ class Test {
             if (Test.#tests.indexOf() < 0) {
                 Test.#tests.push(tst);
                 count++;
-                console.log(`${testName}... %cУспешно`, COLOR_SUCESS);
+                console.log(`%c${testName}... %cУспешно`, COLOR_INFO, COLOR_SUCESS);
             } else {
-                console.group(`${testName}... %cПопытка повторного добавления теста`, COLOR_WARN);
+                console.group(`%c${testName}... %cПопытка повторного добавления теста`, COLOR_INFO, COLOR_WARN);
                 console.log(`${testName} будет добавлен только один раз`, COLOR_WARN);
                 console.groupEnd();
             }
@@ -117,7 +117,7 @@ class Test {
         for (const tst of Test.#tests) {
             console.log(`%c${tst.name}... %cУспешно`, COLOR_INFO, COLOR_SUCESS);
         }
-        console.log('%Проверка завершена', COLOR_ACTION_END);
+        console.log('%cПроверка завершена', COLOR_ACTION_END);
         console.groupEnd();
         Test.#DoRun(Test.#tests);
     }
@@ -147,7 +147,7 @@ class Test {
         for (const tst of tests) {
             var t = new tst();
             result.push(t);
-            console.log(`%c${tst.name} добавлен в очередь`, COLOR_SUCESS);
+            console.log(`%c${tst.name}... %cдобавлен в очередь`, COLOR_INFO, COLOR_SUCESS);
         }
         console.log('%cВыполнено', COLOR_ACTION_END);
         console.groupEnd();
